@@ -45,6 +45,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  justify-content: center;
 }
 button:hover {
   border-color: #646cff;
@@ -76,4 +77,62 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* liam's styling*/
+
+.search-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="text"] {
+  width: calc(100% - 40px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+nav {
+  margin: 10px 0;
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+pre {
+  background-color: #f9f9f9; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
 }
