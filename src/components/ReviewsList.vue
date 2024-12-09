@@ -70,6 +70,8 @@ export default {
   }
 };
 </script>
+
+
 <style scoped>
 .reviews-container {
   max-width: 1200px;
@@ -93,11 +95,15 @@ export default {
 }
 
 .review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensure cards stretch to equal height */
 }
 
 .review-card h2 {
@@ -110,11 +116,16 @@ export default {
   color: #666;
   margin-bottom: 15px;
   line-height: 1.6;
+  flex-grow: 1; /* Allows content area to expand and take up remaining space */
 }
 
 .review-meta {
   font-size: 0.9rem;
   color: #888;
+}
+
+.button-container {
+  margin-top: auto; /* Pushes the button to the bottom */
 }
 
 .cta-button {
@@ -138,4 +149,3 @@ export default {
   outline: none;
 }
 </style>
-
