@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../components/Home.vue';
 import ReviewsList from '../components/ReviewsList.vue';
+import ReviewDetails from "../components/ReviewDetails.vue"
 
 const routes = [
   {
@@ -10,6 +11,11 @@ const routes = [
   {
     path: '/reviews',
     component: ReviewsList,
+    props: true
+  },
+  {
+    path: '/review/:id',
+    component: ReviewDetails,
     props: true
   }
 ];

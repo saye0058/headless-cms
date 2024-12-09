@@ -18,3 +18,21 @@ export const getReviews = async () => {
     return [];
   }
 };
+
+export const getReviewById = async (id) => {
+  try {
+    console.log(`Fetching review with ID: ${id} from API`);
+    const response = await axios.get(`${API_URL}/review/${Number(id)}`);
+    console.log('Raw API response for specific review:', response.data);
+    const review = response.data;
+    return {
+      id: review.id,
+      title: review.title.rendered,
+      content: review.content.rendered,
+      date: new Date(review.date).toLocaleDateString()
+    };
+  } catch (error) {
+    console.error('API Error:', error);
+    return null;
+  }
+};
